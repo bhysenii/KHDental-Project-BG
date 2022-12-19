@@ -1,0 +1,160 @@
+@import '../../style.scss';
+
+.contact {
+    display: flex;
+    padding: 70px 100px;
+    background-color: greenyellow;
+
+    
+
+    .container {
+        
+        display: flex;
+        justify-content: space-between;
+
+        
+
+
+
+        .left {
+            flex: 1;
+            flex-direction: row;
+
+            h1 {
+                font-size: 40px;
+                color: white;
+                font-weight: bold;
+            }
+
+            p{
+                color: gray;
+                font-weight: bold;
+            }
+        }
+
+
+        .right{
+            display: flex;
+            align-items: center;
+            padding: 0px 30px;
+
+            @include mobile {
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+            @include tablet {
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+            button {
+                padding: 20px;
+                background-color: white;
+                border-radius: 20px;
+                cursor: pointer;
+                font-weight: bold;
+
+
+                
+            }
+
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .contact .container {
+      flex-direction: column;
+      text-align: center;
+
+
+      .left {
+        h1 {
+            font-size: 25px;
+        }
+
+}
+    }
+
+    
+
+    
+    
+  }
+
+
+.contactUs{
+    flex-direction: column;
+    width: 100%;
+    padding: 50px 70px;
+    background-color: white;
+
+    hr{
+        color: gray;
+    }
+    .text{
+        align-items: center;
+        justify-content: center;
+        padding: 0px 70px;
+        h1{
+            font-size: 35px;
+            font-weight: 700;
+        }
+        p{
+            color: gray;
+            margin-bottom: 20px;
+        }
+    }
+    .container {
+        padding: 50px 70px;
+        display: flex;
+        flex-direction: column;
+        p{
+            color: gray;
+            font-size: 17px;
+            font-weight: 500;
+            margin-bottom: 50px;
+        }
+    }
+
+    .left {
+        border-right: 1px solid gray;
+        order: 1;
+        justify-content: center;
+        padding: 50px 70px;
+        
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+            input{
+                width: 20%;
+                padding: 10px;
+                background-color: aliceblue;
+                gap: 1em;
+            }
+
+            textarea{
+                gap: 1em;
+                width: 40%;
+                padding: 10px;
+                background-color: aliceblue;
+            }
+
+        }
+        button{
+            text-align: center;
+            padding: 15px 15px;
+            cursor: pointer;
+            background-color: orange;
+            color: white;
+            font-size: 13px;
+            font-weight: bolder;
+        }
+    }
+
+    
+}
